@@ -9,18 +9,18 @@ registry.category("web_tour.tours").add("website_event_altcha", {
             run: "click",
         },
         {
-            content: "Select a ticket",
-            trigger: "#o_wevent_tickets_collapse select",
-            run: "selectByIndex 1",
+            content: "Add one ticket",
+            trigger: ".o_wevent_js_ticket_details button[data-increment-type='plus']",
+            run: "click",
+        },
+        {
+            content: "Click Register",
+            trigger: ".o_wevent_js_ticket_details .a-submit:not([disabled])",
+            run: "click",
         },
         {
             content: "Verify altcha",
             trigger: "altcha-widget input[type='checkbox']",
-            run: "click",
-        },
-        {
-            content: "Click Submit",
-            trigger: "#registration_form button[type='submit']:enabled",
             run: "click",
         },
         {
