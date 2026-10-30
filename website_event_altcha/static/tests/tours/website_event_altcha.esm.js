@@ -9,11 +9,6 @@ registry.category("web_tour.tours").add("website_event_altcha", {
             run: "click",
         },
         {
-            content: "Add one ticket",
-            trigger: ".o_wevent_js_ticket_details button[data-increment-type='plus']",
-            run: "click",
-        },
-        {
             content: "Click Register",
             trigger: ".o_wevent_js_ticket_details .a-submit:not([disabled])",
             run: "click",
@@ -46,6 +41,11 @@ registry.category("web_tour.tours").add("website_event_altcha", {
             content: "Click submit",
             trigger: "#attendee_registration button[type='submit']",
             run: "click",
+            expectUnloadPage: true,
+        },
+        {
+            content: "Registration successful",
+            trigger: "div.o_wereg_confirmed",
         },
     ],
 });
